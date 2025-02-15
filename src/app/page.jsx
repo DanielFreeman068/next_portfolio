@@ -44,12 +44,12 @@ export default function Home() {
       </div>
     </div>
     <div className="w-full flex justify-center p-6">
-      <div className="flex flex-col justify-center md:flex-row bg-gray-900 bg-opacity-80 rounded-xl p-2 md:p-10 space-x-8 space-y-8">
-        <Image className="rounded-[100px] shadow-lg" src='/shortchineseman.jpg' alt='picture of Daniel' width={350} height={350} />
-        <div className="flex flex-col space-y-4">
-          <h1 className="text-[40px] lg:text-[50px] font-segoe">Daniel Freeman</h1>
-          <h1 className="text-2xl font-segoe">Description</h1>
-          <p className="text-lg font-segoe max-w-[300px]">Determined and reliable entry-level web developer looking to be a part of this organization, make a positive impact on it, and grow my experience. Well-rounded and driven developer with an understanding of a variety of programming languages such as HTML, CSS, JavaScript, and Python, as well as leadership and communication skills.</p>
+      <div className="flex flex-col justify-center md:flex-row bg-gray-900 bg-opacity-80 rounded-xl p-2 md:p-10 md:space-x-8 space-y-8">
+        <Image className="rounded-[100px] shadow-lg mx-auto p-4 md:p-0" src='/shortchineseman.jpg' alt='picture of Daniel' width={300} height={300} />
+        <div className="flex flex-col space-y-4 p-4">
+          <h1 className="text-[40px] lg:text-[50px] text-white font-segoe">Daniel Freeman</h1>
+          <h1 className="text-2xl text-white font-segoe">Description</h1>
+          <p className="text-lg text-white font-segoe max-w-[300px]">Determined and reliable entry-level web developer looking to be a part of this organization, make a positive impact on it, and grow my experience. Well-rounded and driven developer with an understanding of a variety of programming languages such as HTML, CSS, JavaScript, and Python, as well as leadership and communication skills.</p>
         </div>
       </div>
     </div>
