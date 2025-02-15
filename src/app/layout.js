@@ -26,23 +26,18 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
         <FooterTheme
-          logoImage="/path-to-your-logo.png"
+          logoImage="/logo.png"
           routes={{
             home: "/",
             about: "/about",
-            testimonials: "/testimonials",
-            contact: "/contact",
-            faqs: "/faqs",
+            projects: "/projects",
           }}
           socialLinks={{
-            github: "https://github.com/yourprofile",
-            twitter: "https://twitter.com/yourprofile",
-            linkedIn: "https://linkedin.com/in/yourprofile",
-            instagram: "https://instagram.com/yourprofile",
-            facebook: "https://facebook.com/yourprofile",
+            github: "https://github.com/DanielFreeman068",
+            linkedIn: "https://www.linkedin.com/in/daniel-freeman-438602351/",
+            instagram: "https://www.instagram.com/daniel_freema8/",
           }}
           webName="Daniel Freeman"
-          address="Your Address Here"
         />
       </body>
     </html>

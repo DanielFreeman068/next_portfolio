@@ -25,17 +25,17 @@ function FooterTheme({ logoImage, routes, socialLinks, webName, address }) {
                         <h1 className="text-xl mb-4 text-center">Website Links</h1>
                         {routes.home && (
                             <h3 className="text-center text-gray-300 text-base">
-                                <a href={routes.home} className="hover:text-blue-400 transition-colors">Home page</a>
+                                <a href={routes.home} className="hover:text-blue-400 transition-colors">Home</a>
                             </h3>
                         )}
                         {routes.about && (
                             <h3 className="text-center text-gray-300 text-base">
-                                <a href={routes.about} className="hover:text-blue-400 transition-colors">About Us</a>
+                                <a href={routes.about} className="hover:text-blue-400 transition-colors">About Me</a>
                             </h3>
                         )}
-                        {routes.testimonials && (
+                        {routes.projects && (
                             <h3 className="text-center text-gray-300 text-base">
-                                <a href={routes.testimonials} className="hover:text-blue-400 transition-colors">Testimonials</a>
+                                <a href={routes.projects} className="hover:text-blue-400 transition-colors">Projects</a>
                             </h3>
                         )}
                         {routes.contact && (
