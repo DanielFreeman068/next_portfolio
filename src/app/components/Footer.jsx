@@ -6,21 +6,8 @@ function FooterTheme({ logoImage, routes, socialLinks, webName, address }) {
 
     return (
         <div>
-            <footer className="bg-[#2C3E50] text-white py-12 mt-16 w-full">
-                <div className="fcont w-11/12 max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4 py-8">
-                    <div className="fhead flex flex-col items-center gap-4">
-                        {!logoImage ? (
-                            <img
-                                src="https://cdn.vectorstock.com/i/preview-1x/65/30/default-image-icon-missing-picture-page-vector-40546530.jpg"
-                                alt="logo"
-                                className="w-40 max-w-full h-auto"
-                            />
-                        ) : (
-                            <img src={logoImage} alt="logo" className="w-40 max-w-full h-auto" />
-                        )}
-                        {address && <div className="text-gray-400 text-base text-center">{address}</div>}
-                    </div>
-
+            <footer className="bg-[#33419E] text-white py-12 mt-16 w-full h-64">
+                <div className="fcont w-11/12 max-w-5xl mx-auto flex justify-evenly gap-20 px-4 py-8">
                     <div className="links">
                         <h1 className="text-xl mb-4 text-center">Website Links</h1>
                         {routes.home && (
@@ -82,15 +69,7 @@ function FooterTheme({ logoImage, routes, socialLinks, webName, address }) {
                     </div>
                 </div>
 
-                <div className="foot text-center py-6 bg-[#243342] text-gray-300 text-sm">
-                    <h3 className="topPage">
-                        <button
-                            onClick={() => window.scrollTo({ top: 0 })}
-                            className="bg-transparent border border-transparent text-[#0077B5] text-xl transition-all ease-in-out duration-500 hover:text-[#81ceeb] hover:underline"
-                        >
-                            Top of Page
-                        </button>
-                    </h3>
+                <div className="foot text-center py-6 bg-gray-900 text-gray-300 text-sm">
                     All Rights Reserved | ©2024 {webName}
                 </div>
             </footer>

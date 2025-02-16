@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import FooterTheme from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,20 +24,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
-        <FooterTheme
-          logoImage="/logo.png"
-          routes={{
-            home: "/",
-            about: "/about",
-            projects: "/projects",
-          }}
-          socialLinks={{
-            github: "https://github.com/DanielFreeman068",
-            linkedIn: "https://www.linkedin.com/in/daniel-freeman-438602351/",
-            instagram: "https://www.instagram.com/daniel_freema8/",
-          }}
-          webName="Daniel Freeman"
-        />
       </body>
     </html>
   );

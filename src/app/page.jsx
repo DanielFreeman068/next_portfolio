@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import FooterTheme from "./components/Footer";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,6 +54,19 @@ export default function Home() {
         </div>
       </div>
     </div>
+    <FooterTheme
+          routes={{
+            home: "/",
+            about: "/about",
+            projects: "/projects",
+          }}
+          socialLinks={{
+            github: "https://github.com/DanielFreeman068",
+            linkedIn: "https://www.linkedin.com/in/daniel-freeman-438602351/",
+            instagram: "https://www.instagram.com/daniel_freema8/",
+          }}
+          webName="Daniel Freeman"
+      />
     </>
   );
 }
