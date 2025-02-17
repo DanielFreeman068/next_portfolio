@@ -7,32 +7,32 @@ function FooterTheme({ logoImage, routes, socialLinks, webName, address }) {
     return (
         <div>
             <footer className="bg-[#33419E] text-white py-12 mt-16 w-full h-64">
-                <div className="fcont w-11/12 max-w-5xl mx-auto flex justify-evenly gap-20 px-4 py-8">
+                <div className="fcont w-11/12 max-w-5xl mx-auto flex justify-evenly gap-20 px-4 py-6">
                     <div className="links">
-                        <h1 className="text-xl mb-4 text-center">Website Links</h1>
+                        <h1 className="text-xl mb-4 text-center whitespace-nowrap">Website Links</h1>
                         {routes.home && (
-                            <h3 className="text-center text-gray-300 text-base">
-                                <a href={routes.home} className="hover:text-blue-400 transition-colors">Home</a>
+                            <h3 className="text-gray-300 text-base border-b-2 border-[#33419E] hover:border-white transition duration-300 w-fit mx-auto">
+                                <a href={routes.home}>Home</a>
                             </h3>
                         )}
                         {routes.about && (
-                            <h3 className="text-center text-gray-300 text-base">
-                                <a href={routes.about} className="hover:text-blue-400 transition-colors">About Me</a>
+                            <h3 className="text-gray-300 text-base border-b-2 border-[#33419E] hover:border-white transition duration-300 w-fit mx-auto">
+                                <a href={routes.about}>About Me</a>
                             </h3>
                         )}
                         {routes.projects && (
-                            <h3 className="text-center text-gray-300 text-base">
-                                <a href={routes.projects} className="hover:text-blue-400 transition-colors">Projects</a>
+                            <h3 className="text-gray-300 text-base border-b-2 border-[#33419E] hover:border-white transition duration-300 w-fit mx-auto">
+                                <a href={routes.projects}>Projects</a>
                             </h3>
                         )}
                         {routes.contact && (
-                            <h3 className="text-center text-gray-300 text-base">
-                                <a href={routes.contact} className="hover:text-blue-400 transition-colors">Contact Us</a>
+                            <h3 className="text-gray-300 text-base border-b-2 border-[#33419E] hover:border-white transition duration-300 w-fit mx-auto">
+                                <a href={routes.contact}>Contact Us</a>
                             </h3>
                         )}
                         {routes.faqs && (
-                            <h3 className="text-center text-gray-300 text-base">
-                                <a href={routes.faqs} className="hover:text-blue-400 transition-colors">FAQS</a>
+                            <h3 className="text-gray-300 text-base border-b-2 border-[#33419E] hover:border-white transition duration-300 w-fit mx-auto">
+                                <a href={routes.faqs}>FAQS</a>
                             </h3>
                         )}
                     </div>
