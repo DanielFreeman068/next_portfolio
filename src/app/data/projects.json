@@ -1,0 +1,72 @@
+[
+    {
+    "id": "pet-adoption-platform",
+    "title": "Pet Adoption Platform",
+    "image": "/petAdoptionImage.png",
+    "githubLink": "https://github.com/DanielFreeman068/Pet-Adoption-Platform",
+    "description": "A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption."
+    },
+    {
+    "id": "event-registration",
+    "title": "Event Registration",
+    "image": "/eventRegistrationImage.png",
+    "githubLink": "https://github.com/DanielFreeman068/EJS--Event-Registration.git",
+    "description": "This project is an Event Registration site that uses EJS and JSON files to store and display data. Users can sign up for events while admins can delete and edit."
+    },
+    {
+    "id": "card-game-api",
+    "title": "Card Game API",
+    "image": "/blackjackImage.png",
+    "githubLink": "https://github.com/DanielFreeman068/Card-Game-API.git",
+    "description": "This project uses the deckofcardsAPI for users to play games of either Blackjack or War."
+    },
+    {
+    "id": "quizzy-bee",
+    "title": "Quizzy Bee",
+    "image": "/reactQuizImage.png",
+    "githubLink": "https://github.com/DanielFreeman068/react_quiz_app.git",
+    "description": "Quizzy Bee is a fully responsive quiz app created in React that tests users on the beautiful sport of Soccer."
+    },
+    {
+    "id": "blog",
+    "title": "Blog",
+    "image": "/blogImage.png",
+    "githubLink": "https://github.com/DanielFreeman068/react_blog.git",
+    "description": "This is a full stack blog that uses React to format and deliver a variety of information on trending news for various topics."
+    },
+    {
+    "id": "tic-tac-toe",
+    "title": "Tic-Tac-Toe",
+    "image": "/tictactoeImage.png",
+    "githubLink": "https://github.com/DanielFreeman068/TicTacToe.git",
+    "description": "A classic two-player Tic-Tac-Toe game built with HTML, CSS, and JavaScript."
+    },
+    {
+    "id": "api-project",
+    "title": "API Project",
+    "image": "/APIImage.png",
+    "githubLink": "https://github.com/DanielFreeman068/myAPI.git",
+    "description": "An API project that provides JSON data of 50 musical artists, including instructions on how to retrieve said data."
+    },
+    {
+    "id": "card-memory-game",
+    "title": "Card Memory Game",
+    "image": "/cardmemoryImage.png",
+    "githubLink": "https://github.com/DanielFreeman068/Card-Memory.git",
+    "description": "A memory card game where you match pairs of cards. This project uses HTML, JavaScript, and CSS to put together a cohesive card memory game."
+    },
+    {
+    "id": "calculator",
+    "title": "Calculator",
+    "image": "/calculatorImage.png",
+    "githubLink": "https://github.com/DanielFreeman068/calculator.git",
+    "description": "A simple calculator with basic arithmetic operations."
+    },
+    {
+    "id": "hangman",
+    "title": "Hang Man",
+    "image": "/hang.png",
+    "githubLink": "https://github.com/DanielFreeman068/Hangman.git",
+    "description": "A word guessing game where you try to figure out the hidden word. This project uses HTML, JavaScript, and CSS to form a working Hangman game."
+    }
+]

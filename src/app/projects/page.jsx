@@ -2,52 +2,77 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import FooterTheme from "../components/Footer";
+import { X } from 'lucide-react';
+import projects from '../data/projects.json'
 
 export default function Home() {
-const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [selectedProject, setSelectedProject] = useState(null);
 
-//project data
-const projects = [
-    {
-    title: "Tic-Tac-Toe",
-    image: "/tictactoeImage.png",
-    githubLink: "https://danielfreeman068.github.io/TicTacToe/",
-    description: "A classic Tic-Tac-Toe game built with HTML, CSS, and JavaScript.",
-    },
-    {
-    title: "Card Memory",
-    image: "/cardmemoryImage.png",
-    githubLink: "https://danielfreeman068.github.io/Card-Memory/",
-    description: "A memory card game where you match pairs of cards.",
-    },
-    {
-    title: "Photo Gallery",
-    image: "/photogalleryImage.png",
-    githubLink: "https://danielfreeman068.github.io/ResponsiveGallery/",
-    description: "A responsive photo gallery showcasing various images.",
-    },
-    {
-    title: "Calculator",
-    image: "/calculatorImage.png",
-    githubLink: "https://danielfreeman068.github.io/calculator/",
-    description: "A simple calculator with basic arithmetic operations.",
-    },
-    {
-    title: "Hang Man",
-    image: "/hang.png",
-    githubLink: "https://danielfreeman068.github.io/Hangman/",
-    description: "A word guessing game where you try to figure out the hidden word.",
-    },
-];
+// //project data
+// const projects = [
+//     {
+//     title: "Pet Adoption Platform",
+//     image: "/petAdoptionImage.png",
+//     githubLink: "https://github.com/DanielFreeman068/Pet-Adoption-Platform",
+//     description: "A full stack pet adoption platform connected to MongoDB. This project uses EJS and NodeJS to allow viewers to search and filter for pets and signed up users to surrender pets for adoption.",
+//     },
+//     {
+//     title: "Event Registration",
+//     image: "/eventRegistrationImage.png",
+//     githubLink: "https://github.com/DanielFreeman068/EJS--Event-Registration.git",
+//     description: "This project is an Event Registration site that uses EJS and JSON files to store and display data. Users can sign up for events while admins can delete and edit.",
+//     },
+//     {
+//     title: "Card Game API",
+//     image: "/blackjackImage.png",
+//     githubLink: "https://github.com/DanielFreeman068/Card-Game-API.git",
+//     description: "This project uses the deckofcardsAPI for users to play games of either Blackjack or War",
+//     },
+//     {
+//     title: "Quizzy Bee",
+//     image: "/reactQuizImage.png",
+//     githubLink: "https://github.com/DanielFreeman068/react_quiz_app.git",
+//     description: "Quizzy Bee is a full responsive quiz app created in react that tests users on the beautiful sport of Soccer",
+//     },
+//     {
+//     title: "Blog",
+//     image: "/blogImage.png",
+//     githubLink: "https://github.com/DanielFreeman068/react_blog.git",
+//     description: "This is a full stack blog that uses react to format and deliver a variety of information on trending news for various topics.",
+//     },
+//     {
+//     title: "Tic-Tac-Toe",
+//     image: "/tictactoeImage.png",
+//     githubLink: "https://github.com/DanielFreeman068/TicTacToe.git",
+//     description: "A classic two player Tic-Tac-Toe game built with HTML, CSS, and JavaScript.",
+//     },
+//     {
+//     title: "API Project",
+//     image: "/APIImage.png",
+//     githubLink: "https://github.com/DanielFreeman068/myAPI.git",
+//     description: "An API project that provides JSON data of 50 musical artists including instructions on how to retrieve said data.",
+//     },
+//     {
+//     title: "Card Memory Game",
+//     image: "/cardmemoryImage.png",
+//     githubLink: "https://github.com/DanielFreeman068/Card-Memory.git",
+//     description: "A memory card game where you match pairs of cards. This project uses HTML, JavaScript, and CSS to put together a cohesive card memory game.",
+//     },
+//     {
+//     title: "Calculator",
+//     image: "/calculatorImage.png",
+//     githubLink: "https://github.com/DanielFreeman068/calculator.git",
+//     description: "A simple calculator with basic arithmetic operations.",
+//     },
+//     {
+//     title: "Hang Man",
+//     image: "/hang.png",
+//     githubLink: "https://github.com/DanielFreeman068/Hangman.git",
+//     description: "A word guessing game where you try to figure out the hidden word. This project uses HTML, JavaScript, and CSS to form a working Hangman game.",
+//     },
+// ];
 
-const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
-
-const handleProjectChange = (index) => {
-    setCurrentProjectIndex(index);
-};
-
-const currentProject = projects[currentProjectIndex];
 return (
     <>
     <div className="flex justify-between items-center bg-gray-900 py-4 mb-8 px-4">
@@ -86,40 +111,61 @@ return (
             </div>
         </div>
     </div>
-    {/* projects section */}
-    <div className="p-6">
-        <h2 className="text-4xl text-center mb-6">My Coding Projects</h2>
-        <div className="flex justify-center space-x-6 mb-6">
-            {projects.map((project, index) => (
-            <button key={index} className={`px-4 py-2 text-sm font-semibold rounded-md ${ index === currentProjectIndex ? "bg-gray-900 text-white" : "bg-gray-300 text-gray-800"}`} onClick={() => handleProjectChange(index)}>
-                {project.title}
-            </button>
+    {/* Projects Gallery */}
+    {/* <div className="container mx-auto px-4">
+        <div className="flex flex-wrap gap-4 justify-center">
+        {projects.map((project, index) => (
+            <div key={index} className="w-[300px] md:w-[400px] cursor-pointer transform transition-transform hover:scale-105" onClick={() => setSelectedProject(project)}>
+                <div className="relative h-48 md:h-60 rounded-sm overflow-hidden">
+                <Image src={project.image} alt={project.title} fill className="object-cover"/>
+                    <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <h3 className="text-white text-xl font-semibold">{project.title}</h3>
+                    </div>
+                </div>
+            </div>
+        ))}
+        </div>
+    </div> */}
+
+    <div className="container mx-auto px-4">
+        <h1 className="text-3xl font-semibold text-white text-center mb-6">Projects</h1>
+        <div className="flex flex-wrap gap-4 justify-center">
+            {projects.map((project) => (
+                <div key={project.id} className="w-[300px] md:w-[400px] cursor-pointer transform transition-transform hover:scale-105">
+                    <Link href={`/projects/${project.id}`} className="block">
+                        <div className="relative h-48 md:h-60 rounded-sm overflow-hidden">
+                            <Image src={project.image} alt={project.title} fill className="object-cover" />
+                            <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                <h3 className="text-white text-xl font-semibold">{project.title}</h3>
+                            </div>
+                        </div>
+                    </Link>
+                </div>
             ))}
         </div>
-        <div className="max-w-xl mx-auto bg-gray-900 rounded-lg shadow-md p-4">
-            <h3 className="text-2xl font-semibold text-center mb-4">{currentProject.title}</h3>
-            <div className="relative w-full h-64 mb-4">
-                <Image src={currentProject.image} alt={currentProject.title} layout="fill" className="rounded-md" style={{ objectFit: "cover" }}></Image>
-            </div>
-            <p className="text-center mb-4 text-white">{currentProject.description}</p>
-            <a href={currentProject.githubLink} target="_blank" rel="noopener noreferrer" className="block text-center text-purple-600 underline">
-                View on GitHub
-            </a>
-        </div>
     </div>
-    <FooterTheme
-        routes={{
-            home: "/",
-            about: "/about",
-            projects: "/projects",
-        }}
-        socialLinks={{
-            github: "https://github.com/DanielFreeman068",
-            linkedIn: "https://www.linkedin.com/in/daniel-freeman-438602351/",
-            instagram: "https://www.instagram.com/daniel_freema8/",
-        }}
-        webName="Daniel Freeman"
-    />
+
+    {/* Modal */}
+    {/* {selectedProject && (
+        <div className="fixed inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center p-4 z-50">
+            <div className="bg-gray-100 rounded-lg w-[375px] md:w-[450px] max-w-2xl relative">
+                <button onClick={() => setSelectedProject(null)} className="absolute top-4 right-4 p-1 hover:bg-gray-100 rounded-full transition-colors">
+                    <X className="w-6 h-6" />
+                </button>
+                
+                <div className="p-6 mt-8">
+                    <div className="relative h-48 md:h-60 mb-4 w-[320px] md:w-[400px] mx-auto">
+                        <Image src={selectedProject.image} alt={selectedProject.title} fill objectFit="cover" className="rounded-md"/>
+                    </div>
+                    
+                    <h2 className="text-2xl font-bold mb-4 text-black">{selectedProject.title}</h2>
+                    <p className="text-gray-800 mb-4">{selectedProject.description}</p>
+                    
+                    <a href={selectedProject.githubLink} target="_blank" rel="noopener noreferrer" className="inline-block bg-gray-900 text-orange-400 font-semibold px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors">View Project</a>
+                </div>
+            </div>
+        </div>
+    )} */}
     </>
 );
 }
