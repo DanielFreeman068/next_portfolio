@@ -46,7 +46,7 @@ return (
     {/* job cards */}
     <div className="relative z-0 flex flex-col items-center mt-20 font-segoe">
         <h1 className="text-4xl font-semibold text-white mb-10">My Job Experience</h1>
-        <div className="flex flex-wrap justify-center gap-12 mx-8 relative z-0">  
+        <div className="flex flex-wrap justify-center gap-16 mx-8 relative z-0">  
             
             {/* Store Manager */}
             <div className="w-[290px] h-[435px] bg-gray-900 rounded-lg p-2 shadow-lg cursor-pointer group relative">
