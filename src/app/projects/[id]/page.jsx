@@ -13,7 +13,7 @@ export default async function ProjectDetail({ params }) {
     const project = projects.find((p) => p.id === paramID.id);
 
     if (!project) {
-        return <h1>Project Not Found</h1>;
+        return <h1 className="text-center mt-10 text-white">404 Error! Project Not Found</h1>;
     }
     return (
         <div>
