@@ -49,7 +49,7 @@ export default function Home() {
         <div className="flex flex-col space-y-4 p-4 mx-auto">
           <h1 className="text-[35px] lg:text-[50px] text-white font-segoe">Daniel Freeman</h1>
           <h1 className="text-xl text-white font-segoe">Description</h1>
-          <p className="text-md text-white font-segoe max-w-5/6 sm:max-w-[300px]">Determined and reliable entry-level web developer looking to be a part of this organization, make a positive impact on it, and grow my experience. Well-rounded and driven developer with an understanding of a variety of programming languages such as HTML, CSS, JavaScript, and Python, as well as leadership and communication skills.</p>
+          <p className="text-md text-white font-segoe max-w-5/6 sm:max-w-[300px]">Determined and reliable full stack developer looking to be a part of this organization, make a positive impact on it, and grow my experience. Well-rounded and driven developer with an understanding of a variety of programming languages such as HTML, CSS, JavaScript, and Python, as well as leadership and communication skills.</p>
         </div>
       </div>
     </div>
