@@ -17,7 +17,7 @@ export default {
           "99.9%": { borderRight: "2px solid orange" },
           "100%": { width: "8.5em", borderRight: "none" },
         },
-        blink: {
+        blinking: {
           "50%": { borderColor: "transparent" },
         },
       },

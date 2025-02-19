@@ -11,11 +11,11 @@ export default function Home() {
       {/* Logo and Name */}
       <div className="flex items-center gap-4">
         <Image src="/logo.png" alt="logo" width={50} height={50} />
-        <p className="font-courier text-white text-xl whitespace-nowrap overflow-hidden w-[8.5em] border-r-2 border-orange-500 animate-typing animate-blink">Daniel Freeman</p>
+        <p className="font-courier text-white text-xl whitespace-nowrap overflow-hidden w-[8.5em] border-r-2 border-orange-500 animate-typing animate-blinking">Daniel Freeman</p>
       </div>
 
       {/* Hamburger Icon (Bigger) */}
-      <div className="block md:hidden flex items-center">
+      <div className="md:hidden flex items-center">
         <button className="text-white p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/>

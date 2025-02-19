@@ -11,7 +11,7 @@ return (
         {/* Logo and Name */}
         <div className="flex items-center gap-4">
             <Image src="/logo.png" alt="logo" width={50} height={50} />
-            <p className="font-courier text-white text-xl whitespace-nowrap overflow-hidden w-[8.5em] border-r-2 border-orange-500 animate-typing">Daniel Freeman</p>
+            <p className="font-courier text-white text-xl whitespace-nowrap overflow-hidden w-[8.5em] border-r-2 border-orange-500 animate-typing animate-blinking">Daniel Freeman</p>
         </div>
 
         {/* Hamburger Icon (Bigger) */}
